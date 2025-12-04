@@ -1,0 +1,218 @@
+/* cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background:#1E4C49;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.card p {
+    font-size: 17px;
+    color: white;
+    line-height: 1.6;
+    font-family: "Inter", sans-serif;
+}
+
+.cards .card p{
+    color: white;
+}
+
+
+/* section */
+.section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+}
+
+.section p {
+    font-size: 18px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: "Inter", sans-serif;
+    color: black;
+}
+
+.section h2 {
+    font-family: "Inter", sans-serif;
+    margin-top: 7%;
+}
+
+
+/* mission */
+.mission-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mission-full {
+  width: 100%;             
+  background-color: #1E4C49;
+  color: white; 
+  text-align: center;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-full h2 {
+  font-size: 38px;
+  margin-bottom: 0%;
+  font-family: "Inter", sans-serif;
+}
+
+.mission-full p {
+  font-size: 18px;
+  max-width: 900px;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+}
+
+
+/* hero */
+.hero-left h1 {
+    font-size: 4.5rem;
+}
+
+.hero-left p {
+    font-size: 1.25rem;
+    margin-top: 20px;
+    color: var(--text-dark);
+    margin-right: 2%;
+}
+
+
+/* expertise */
+.expertise {
+    width: 100%;
+    padding: 10px 90px;
+    background: white;
+    font-family: "Inter", sans-serif;
+    border-top: 3px solid #000;
+    margin-top: 2%;
+}
+
+.expertise h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #1E4C49;
+    font-family: "Inter", sans-serif;
+}
+
+/* expertise grid */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 3px solid #1E4C49;
+    border-left: 0;
+    border-right: 0;
+}
+
+.expertise-card {
+    padding: 60px 40px;
+    border-left: 2px solid #1E4C49;
+}
+
+.expertise-card:first-child {
+    border-left: 0;
+}
+
+.expertise-card h3 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: #1E4C49;
+}
+
+.expertise-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+}
+
+
+/* footer */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* for tablets */
+@media (max-width: 768px) {
+
+    .hero-left h1 {
+        font-size: 3rem;
+    }
+
+    .cards {
+        gap: 20px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-card {
+        border-left: 0 !important;
+        border-top: 2px solid #1E4C49;
+    }
+
+    .expertise-card:first-child {
+        border-top: 0;
+    }
+}
+
+
+/* for phones */
+@media (max-width: 480px) {
+
+    .hero-left h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-left p {
+        font-size: 1rem;
+    }
+
+    .mission-full h2,
+    .expertise h2 {
+        font-size: 28px;
+    }
+
+    .mission-full p,
+    .section p,
+    .expertise-card p {
+        font-size: 16px;
+    }
+}
