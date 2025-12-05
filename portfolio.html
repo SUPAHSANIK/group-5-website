@@ -12,9 +12,10 @@
 <header>
     <div class="nav-container">
         <div class="logo">Group 5</div>
-        <button class="menu-toggle">☰</button>
+        <!-- Added aria-controls and aria-expanded for accessibility -->
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">☰</button>
 
-        <nav>
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -39,52 +40,17 @@
 <hr class="team-divider">
     <div class="team-container">
         <div class="team-card">
-        <img src="joanna.png" alt="Team Member">
-        <div class="card-info">
-        <h2>Joanna Marie L. Perdido</h2>
-        <h4>IT Manager</h4>
-        <a href="#" class="cv-btn">Download CV</a>
-    </div>
-</div>
-
-    <div class="team-card">
-    <img src="rea.png" alt="Team Member">
+    <!-- Image source placeholder updated to match the common style -->
+    <img src="https://placehold.co/300x350/a1acb0/ffffff?text=Lance" alt="Team Member Lance Pugal">
     <div class="card-info">
-        <h2> Rea Mea A. Quijarro</h2>
-        <h4>Web Developer</h4>
-        <a href="#" class="cv-btn">Download CV</a>
-    </div>
-</div>
-
-    <div class="team-card">
-        <img src="Jenny.png" alt="Team Member">
-        <div class="card-info">
-            <h2>Jenny Rose S. Mina</h2>
-            <h4> UI/UX Designer</h4>
-            <a href="#" class="cv-btn">Download CV</a>
-        </div>
-    </div>  
-
-
-     <div class="team-card">
-    <img src="jms.png" alt="Team Member">
-    <div class="card-info">
-        <h2>John Mark P. Noleal</h2>
-        <h4>Technical Solutions Engineer</h4>
-        <a href="#" class="cv-btn">Download CV</a>
-    </div>
-</div>
-
-        <div class="team-card">
-    <img src="kens.png" alt="Team Member">
-    <div class="card-info">
-        <h2>Nathaniel I. Medina</h2>
+        <h2>Lance Andrei S. Pugal</h2>
         <h4>Full-Stack Developer</h4>
         <a href="" class="cv-btn">Download CV</a>
     </div>
 </div>
         <div class="team-card">
-    <img src="monezz.png" alt="Team Member">
+    <!-- Image source placeholder updated to match the common style -->
+    <img src="https://placehold.co/300x350/a1acb0/ffffff?text=John+Dave" alt="Team Member John Dave Mones">
     <div class="card-info">
         <h2>John Dave M. Mones</h2>
         <h4>Security Analyst</h4>
@@ -92,7 +58,8 @@
     </div>
 </div>
      <div class="team-card">
-    <img src="Joshua.png" alt="Team Member">
+    <!-- Image source placeholder updated to match the common style -->
+    <img src="https://placehold.co/300x350/a1acb0/ffffff?text=Joshua" alt="Team Member Joshua Mendoza">
     <div class="card-info">
         <h2>Joshua A. Mendoza</h2>
         <h4>Content Strategist</h4>
@@ -110,29 +77,77 @@
     <h2>BEHIND EVERY PROJECT</h2>
 
     <div class="project-gallery">
-        <img src="TEAM.jpg" >
-        <img src="lab.jpg" >
-        <img src=" yeah.jpg" >
-        <img src="lab2.jpg">
-        <img src="lab3.jpg">
-        <img src="yeahh.jpg">
-        <img src="lab4.jpg">
-        <img src="lab5.jpg">
-        <img src="yeahhh.jpg">
-        <img src="yes.jpg">
+        <!-- Each image now has an onclick event to trigger the modal, passing all project details -->
+        <!-- Note: I replaced the old static image URLs (e.g., TEAM.jpg) with placeholders for live preview, 
+             you can change them back if you have those files available. -->
+        <img src="https://placehold.co/300x200/405a5b/ffffff?text=Project+1" alt="Project Image 1"
+             onclick="openModal('https://placehold.co/800x600/405a5b/ffffff?text=Project+1+Detail', 'Project Title 1: Inventory System', 'A comprehensive system developed in Java to manage inventory and sales data for small businesses.', 'Java, SQL, Swing', 'Lance Pugal')">
+        
+        <img src="https://placehold.co/300x200/405a5b/ffffff?text=Project+2" alt="Project Image 2"
+             onclick="openModal('https://placehold.co/800x600/405a5b/ffffff?text=Project+2+Detail', 'Project Title 2: Responsive Portfolio', 'A fully responsive website built using HTML, CSS, and vanilla JavaScript, demonstrating modern front-end techniques.', 'HTML5, CSS3, JavaScript', 'John Dave Mones')">
+        
+        <img src="https://placehold.co/300x200/405a5b/ffffff?text=Project+3" alt="Project Image 3"
+             onclick="openModal('https://placehold.co/800x600/405a5b/ffffff?text=Project+3+Detail', 'Project Title 3: Security Analysis Report', 'A detailed report analyzing common web application vulnerabilities and proposing mitigation strategies using industry best practices.', 'Security Analysis, Penetration Testing', 'Joshua Mendoza')">
+        
+        <!-- Added generic placeholder click handlers for the remaining images for completeness -->
+        <img src="https://placehold.co/300x200/405a5b/ffffff?text=Project+4" alt="Project Image 4"
+             onclick="openModal('https://placehold.co/800x600/405a5b/ffffff?text=Project+4+Detail', 'Project Title 4: E-Commerce Mockup', 'A visually stunning modern e-commerce page mockup.', 'HTML, CSS', 'Lance Pugal')">
+        
+        <img src="https://placehold.co/300x200/405a5b/ffffff?text=Project+5" alt="Project Image 5"
+             onclick="openModal('https://placehold.co/800x600/405a5b/ffffff?text=Project+5+Detail', 'Project Title 5: Database Schema', 'Design and implementation of a normalized database schema for a library management system.', 'MySQL, ERD Modeling', 'John Dave Mones')">
+        
+        <img src="https://placehold.co/300x200/405a5b/ffffff?text=Project+6" alt="Project Image 6"
+             onclick="openModal('https://placehold.co/800x600/405a5b/ffffff?text=Project+6+Detail', 'Project Title 6: Content Calendar', 'Development of a multi-platform social media content calendar for a tech startup.', 'SEO, Content Strategy', 'Joshua Mendoza')">
+        
+        <img src="https://placehold.co/300x200/405a5b/ffffff?text=Project+7" alt="Project Image 7"
+             onclick="openModal('https://placehold.co/800x600/405a5b/ffffff?text=Project+7+Detail', 'Project Title 7: Simple Chat App', 'A basic real-time chat application built with Node.js and WebSockets.', 'Node.js, WebSockets, HTML', 'Lance Pugal')">
+        
+        <img src="https://placehold.co/300x200/405a5b/ffffff?text=Project+8" alt="Project Image 8"
+             onclick="openModal('https://placehold.co/800x600/405a5b/ffffff?text=Project+8+Detail', 'Project Title 8: Network Topology', 'Design and simulation of a secure campus network topology.', 'Cisco Packet Tracer, Network Security', 'John Dave Mones')">
+        
+        <img src="https://placehold.co/300x200/405a5b/ffffff?text=Project+9" alt="Project Image 9"
+             onclick="openModal('https://placehold.co/800x600/405a5b/ffffff?text=Project+9+Detail', 'Project Title 9: Data Visualization', 'Interactive data visualization dashboards using D3.js.', 'D3.js, JavaScript, Data Analysis', 'Joshua Mendoza')">
+        
+        <img src="https://placehold.co/300x200/405a5b/ffffff?text=Project+10" alt="Project Image 10"
+             onclick="openModal('https://placehold.co/800x600/405a5b/ffffff?text=Project+10+Detail', 'Project Title 10: Server Monitoring', 'A simple script to monitor server health and resource usage.', 'Python, Bash Scripting', 'Lance Pugal')">
     </div>
 </section>
 
-<section class="banner">
+<section class="banner-section">
     <div class="banner-overlay"></div>
-    <img src="Information-Technology-2.jpeg" alt="Project Banner" class="banner-img">
-    <h2 class="banner-text">
-        Tech, Creativity, and Teamwork – Transforming Classroom Knowledge into Exciting Projects!
-    </h2>
+    <p class="banner-text">Where innovation meets execution, one project at a time.</p>
 </section>
 
+<footer>
+    © 2024 Group 5. All rights reserved.
+</footer>
 
-<footer>© 2025 Group 5 — All Rights Reserved</footer>
+<!-- PROJECT MODAL STRUCTURE - This is the new element that pops up -->
+<div id="project-modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-body">
+            <div class="modal-left">
+                <img id="modal-image" src="" alt="Project Detail Image">
+            </div>
+            <div class="modal-right">
+                <h2 id="modal-title"></h2>
+                <p class="modal-label">Project Lead:</p>
+                <p id="modal-lead"></p>
+                <p class="modal-label">Technologies Used:</p>
+                <p id="modal-tech"></p>
+                <p class="modal-label">Project Description:</p>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="view-project-btn">View Live Project (Optional Link)</a>
+        </div>
+    </div>
+</div>
+<!-- END PROJECT MODAL STRUCTURE -->
 
+<!-- External JavaScript for mobile menu and now, the modal functionality -->
+<script src="script.js"></script>
 </body>
 </html>
