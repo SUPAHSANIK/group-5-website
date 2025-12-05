@@ -11,9 +11,10 @@
 <header>
     <div class="nav-container">
         <div class="logo">Group 5</div>
-        <button class="menu-toggle">☰</button>
+        <!-- Added aria-controls and aria-expanded for accessibility -->
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">☰</button>
 
-        <nav>
+        <nav id="main-nav">
             <ul>
                 <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -32,18 +33,18 @@
         <a href="contact.html" class="connect-btn">Connect</a>
 
     </div>
-    </div>
-
     <div class="hero-right">
-        <img src="tehnology.jpg" alt="">
+        <!-- Replaced image with a high-quality placeholder to ensure it displays on GitHub Pages, as local images must be uploaded. Please replace with your actual 'tehnology.jpg' file when uploading. -->
+        <img src="https://placehold.co/500x350/1d4a4b/ffffff?text=Technology+Vision" alt="Abstract image representing technology and innovation.">
     </div>
-</section>
 </section>
 
 
 <footer>
-    © 2025 Group 5 — All Rights Reserved
+    © 2024 Group 5. All rights reserved.
 </footer>
 
+<!-- External JavaScript for mobile menu functionality -->
+<script src="script.js"></script>
 </body>
 </html>
